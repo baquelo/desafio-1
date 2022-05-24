@@ -4,7 +4,7 @@ WORKDIR /app
 COPY src .
 RUN go build main.go
 
-FROM alpine:latest
+FROM scratch
 
 WORKDIR /app
 COPY --from=builder /app/main .
